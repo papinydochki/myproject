@@ -1,0 +1,24 @@
+{% extends 'main/ledy.html' %}
+
+{% block title  %} Список услуг {% endblock %}
+
+{% block content  %}
+<div class="featured">
+    <h1>Оформление заявки</h1>
+    <form method="post">
+
+        {% csrf_token %}
+        <input name="first_name" id="first_name" type="text" placeholder="Имя" class="form-control"><br>
+        <input name="last_name" id="last_name" type="text" placeholder="Фамилия" class="form-control"><br>
+        <input name="num_phone" id="num_phone" type="text" placeholder="Номер телефона" class="form-control"><br>
+        <input name="e_mail" id="e_mail" type="text" placeholder="e-mail" class="form-control"><br>
+        <button class="btn btn-success" type="submit">Отправить</button><br>
+        <div class="error"> {{ error }} </div>
+
+    </form>
+
+
+
+</div>
+
+{% endblock %}

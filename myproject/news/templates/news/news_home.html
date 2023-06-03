@@ -1,0 +1,18 @@
+{% extends 'main/ledy.html' %}
+
+{% block title  %} Заявка {% endblock %}
+
+{% block content  %}
+<div class="features">
+
+    <h1>Заявки</h1>
+
+    {% for el in news %}
+    <div class="alert alert-warning">
+        <h3>{{ el.first_name }}</h3>
+        <p>{{ el.e_mail }}</p>
+    </div>
+{% endfor %}
+
+</div>
+{% endblock %}
